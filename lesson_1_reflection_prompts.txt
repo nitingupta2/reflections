@@ -1,0 +1,52 @@
+How did viewing a diff between two versions of a file help you see the bug that
+was introduced?
+
+>FC game_old.js game_new.js
+
+*showed 'space' was spelt as 'spacr' in game_new.js
+
+How could having easy access to the entire history of a file make you a more
+efficient programmer in the long term?
+
+* Find differences in current and any previous version of the file
+* Easier to go back and choose past version if an error was made in a later version
+
+What do you think are the pros and cons of manually choosing when to create a
+commit, like you do in Git, vs having versions automatically saved, like Google
+docs does?
+
+** PROS
+* Clear logical breaks when the commits are done manually
+* Determine frequency of commit while working on a large code section (hourly, EOD)
+* Flexibility in determining a commit policy when collaborating with many people
+
+** CONS
+* Manual commits assume good habits from all collaborators
+* Difficult to enforce a commit policy
+
+Why do you think some version control systems, like Git, allow saving multiple
+files in one commit, while others, like Google Docs, treat each file separately?
+
+* Logical to save & commit multiple files involving the same project
+
+How can you use the commands git log and git diff to view the history of files?
+
+>git log
+
+* shows summary of historical changes done in a repo
+
+>git diff <commitID1> <commitID2>
+
+* compare 2 commits in a repo (within the same or more than one file)
+* track insertions and deletions
+
+How might using version control make you more confident to make changes that
+could break something?
+
+>git checkout <commitID>
+* Ease of reverting back to previous versions by 'checkout' inspires confidence to 
+make changes without worrying about breaking something
+
+Now that you have your workspace set up, what do you want to try using Git for?
+
+* Versioning code files
