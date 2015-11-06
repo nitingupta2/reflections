@@ -14,13 +14,39 @@ What value do you think it offers?
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+>git diff			## compares working directory and staging area
+>git diff --staged	## compares staging area and most recent commit in repository
+
+* use above statement to compare the changes made to source code and then make commits
+
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+* Branches are useful while making experimental changes to a project that are
+not finalized for production
+
 How do the diagrams help you visualize the branch structure?
+
+>git log --graph --oneline master easy-mode 
+>git log -n 1
+
+* shows branches and commits bifurcated from master branch
+* could context-switch from master to other branches and come back
+* finally merge branch to master when all changes are finalized
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+>git merge master <branchName>
+>git branch -d <branchName>		## removes <branchName> object from working tree
+
+* commits the changes made in <branchName> to master branch
+* master branch nodes include the nodes that were present in <branchName>
+
 What are the pros and cons of Git’s automatic merging vs. always doing merges
 manually?
+
+* Automatic merging makes sense when there is no conflict in code,
+i.e. 2 or more collaborators do not work on the same function or code snippet
+
+* Manual merges are better in resolving code conflicts
